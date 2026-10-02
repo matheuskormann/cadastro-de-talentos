@@ -12,9 +12,10 @@ desafioCurriculos/
 │   ├── cadastroTalentos.Infrastructure/   EF Core, migrations, leitura de PDF
 │   ├── cadastroTalentos.Presentation/     API (controllers, configuração)
 │   └── cadastroTalentos.sln
-└── cadastro-talentos-web/                 Frontend Next.js (React)
-    └── src/
-        └── app/                           Rotas (App Router)
+├── cadastro-talentos-web/                 Frontend Next.js (React)
+│    └── src/
+│       └── app/                           Rotas (App Router)
+└── docs/                                  currículos de teste
 ```
 
 ## Tecnologias
@@ -23,6 +24,11 @@ desafioCurriculos/
 | -------- | ---------------------------------- | ------- |
 | Backend  | .NET SDK / ASP.NET Core            | 9.0     |
 | Backend  | Entity Framework Core (SqlServer)  | 9.0.9   |
+| Backend  | FluentValidation                   | 12.1.1  |
+| Backend  | PdfPig (leitura de PDF)            | 0.1.16  |
+| Backend  | OpenAI (SDK oficial .NET)          | 2.5.0   |
+| Backend  | Swashbuckle SwaggerUI              | 10.2.3  |
+| Backend  | DotNetEnv                          | 3.2.0   |
 | Banco    | SQL Server Express                 | —       |
 | Frontend | Next.js                            | 16.3.7  |
 | Frontend | React                              | 19.2.8  |
@@ -49,7 +55,8 @@ dotnet run --project cadastroTalentos.Presentation
 
 - `dotnet tool restore` instala o `dotnet-ef` na versão fixada no projeto (`.config/dotnet-tools.json`).
 - `dotnet ef database update` cria o banco `CadastroTalentos` e aplica todas as migrations.
-- API em `http://localhost:5112`.
+- API em `http://localhost:5112` — documentação Swagger em `http://localhost:5112/swagger`.
+- Para a leitura do currículo com IA, copie `.env.example` para `.env` e informe `OPENAI_API_KEY`. Sem a chave, a leitura usa expressões regulares.
 
 ### 2. Frontend
 
@@ -57,6 +64,7 @@ Em outro terminal:
 
 ```bash
 cd cadastro-talentos-web
+cp .env.example .env.local
 npm install
 npm run dev
 ```
