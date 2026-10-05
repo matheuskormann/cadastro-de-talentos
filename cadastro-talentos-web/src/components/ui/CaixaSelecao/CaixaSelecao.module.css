@@ -1,0 +1,65 @@
+.caixa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--texto-md);
+  color: var(--cor-texto-secundario);
+  cursor: pointer;
+  user-select: none;
+}
+
+.entrada {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 6px;
+  background: var(--cor-superficie);
+  cursor: pointer;
+  transition:
+    background var(--transicao-rapida),
+    border-color var(--transicao-rapida);
+}
+
+.entrada::before {
+  content: "";
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--cor-texto-invertido);
+  border-bottom: 2px solid var(--cor-texto-invertido);
+  transform: translateY(-1px) rotate(-45deg) scale(0);
+  transition: transform var(--transicao-rapida);
+}
+
+.entrada:checked {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria);
+}
+
+.entrada:checked::before {
+  transform: translateY(-1px) rotate(-45deg) scale(1);
+}
+
+.entrada:focus-visible {
+  box-shadow: var(--anel-foco);
+}
+
+.entrada:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 1023px), (pointer: coarse) {
+  .caixa {
+    min-height: 36px;
+  }
+
+  .entrada {
+    width: 24px;
+    height: 24px;
+  }
+}

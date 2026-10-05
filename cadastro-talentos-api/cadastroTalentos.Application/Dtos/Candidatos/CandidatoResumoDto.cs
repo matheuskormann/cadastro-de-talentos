@@ -1,3 +1,4 @@
+using cadastroTalentos.Application.Dtos.Avaliacoes;
 using cadastroTalentos.Core.Enums;
 
 namespace cadastroTalentos.Application.Dtos.Candidatos;
@@ -13,5 +14,5 @@ public record CandidatoResumoDto(
     bool IdadeEstimada,
     OrigemCadastro OrigemCadastro,
     bool PossuiCurriculo,
-    decimal? NotaGeral,
+    AvaliacaoDto? Avaliacao,
     DateTime DataCadastro);

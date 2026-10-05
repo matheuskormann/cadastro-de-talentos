@@ -1,0 +1,75 @@
+.sobreposicao {
+  position: fixed;
+  inset: 0;
+  z-index: var(--camada-sobreposicao);
+  background: var(--cor-sobreposicao);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.sobreposicaoVisivel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.painel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--camada-sobreposicao);
+  width: min(var(--largura-painel), 100vw);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-painel);
+  transform: translateX(calc(100% + 100px));
+  visibility: hidden;
+  transition:
+    transform var(--transicao-lenta),
+    visibility 0s linear 450ms;
+}
+
+.painelAberto {
+  transform: translateX(0);
+  visibility: visible;
+  transition:
+    transform var(--transicao-lenta),
+    visibility 0s;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-6);
+  padding: var(--espaco-5) var(--espaco-7) var(--espaco-10);
+}
+
+.barraSuperior {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--cor-superficie-suave);
+  color: var(--cor-texto-secundario);
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.fechar:hover {
+  background: var(--cor-superficie-suave-hover);
+}
+
+@media (max-width: 640px) {
+  .conteudo {
+    padding: var(--espaco-4) var(--espaco-4) var(--espaco-10);
+  }
+}

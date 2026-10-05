@@ -1,0 +1,240 @@
+.identificacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.nome {
+  font-size: var(--texto-titulo-painel);
+  font-weight: var(--peso-bold);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.subtitulo {
+  font-size: var(--texto-base);
+  color: var(--cor-texto-secundario);
+}
+
+.etiquetas {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.acoesRapidas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--espaco-2);
+}
+
+.acaoRapida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 6px;
+  border-radius: 14px;
+  background: var(--cor-primaria-suave);
+  color: var(--cor-primaria);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-medio);
+  transition: background var(--transicao-rapida);
+}
+
+.acaoRapida:hover {
+  background: var(--cor-primaria-suave-hover);
+}
+
+.acaoPrincipal {
+  background: var(--cor-primaria);
+  color: var(--cor-texto-invertido);
+}
+
+.acaoPrincipal:hover {
+  background: var(--cor-primaria-hover);
+}
+
+.acaoDesabilitada {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.informacoes {
+  overflow: hidden;
+  border-radius: var(--raio-lg);
+  background: var(--cor-superficie-suave);
+}
+
+.informacao {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  padding: 13px var(--espaco-4);
+  border-bottom: 1px solid var(--cor-borda-suave);
+  font-size: var(--texto-base);
+}
+
+.informacao:last-child {
+  border-bottom: 0;
+}
+
+.informacao dt {
+  flex: none;
+  color: var(--cor-texto-secundario);
+}
+
+.informacao dd {
+  min-width: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secaoTitulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-semibold);
+  color: var(--cor-texto-secundario);
+}
+
+.texto {
+  font-size: var(--texto-base);
+  line-height: 1.5;
+  text-wrap: pretty;
+  white-space: pre-line;
+}
+
+.itens {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+}
+
+.itemHistorico {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: var(--espaco-3);
+  border-left: 2px solid var(--cor-destaque);
+}
+
+.itemTitulo {
+  font-size: var(--texto-base);
+  font-weight: var(--peso-semibold);
+}
+
+.itemDetalhe {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-suave);
+}
+
+.itemDescricao {
+  margin-top: 4px;
+  font-size: var(--texto-md);
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.grupoCompetencias {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grupoRotulo {
+  font-size: var(--texto-xs);
+  color: var(--cor-texto-suave);
+}
+
+.competencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.arquivo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--cor-borda-media);
+  border-radius: var(--raio-lg);
+}
+
+.arquivoIcone {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: none;
+  width: 36px;
+  height: 46px;
+  padding-bottom: 6px;
+  border-radius: var(--raio-sm);
+  background: var(--cor-superficie-suave);
+}
+
+.selo {
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-invertido);
+  font-size: 0.5rem;
+  font-weight: var(--peso-bold);
+}
+
+.arquivoNome {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--texto-md);
+  font-weight: var(--peso-medio);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avaliacao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+  padding: var(--espaco-4);
+  border-radius: var(--raio-lg);
+  background: var(--cor-superficie-suave);
+}
+
+.notaGeral {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+}
+
+.notaGeralValor {
+  font-size: 2rem;
+  font-weight: var(--peso-bold);
+  letter-spacing: -0.03em;
+}
+
+.semAvaliacao {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-suave);
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  gap: var(--espaco-2);
+  flex-wrap: wrap;
+  padding-top: var(--espaco-2);
+}

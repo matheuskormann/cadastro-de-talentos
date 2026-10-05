@@ -1,0 +1,238 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-7);
+  animation: surgir 400ms var(--curva-suave);
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  flex-wrap: wrap;
+}
+
+.criterio {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-3);
+  font-size: var(--texto-md);
+  color: var(--cor-texto-secundario);
+}
+
+.seletorCriterio {
+  min-width: 190px;
+}
+
+.dica {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-suave);
+}
+
+.tabela {
+  overflow: hidden;
+  border-radius: var(--raio-xl);
+  background: var(--cor-superficie);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: 52px minmax(180px, 1.6fr) repeat(3, minmax(100px, 1fr)) 64px 112px;
+  align-items: center;
+  gap: var(--espaco-4);
+  padding: 16px 24px;
+}
+
+.cabecalhoTabela {
+  border-bottom: 1px solid var(--cor-borda-suave);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-semibold);
+  color: var(--cor-texto-suave);
+  letter-spacing: 0.02em;
+}
+
+.colunaAtiva {
+  color: var(--cor-primaria);
+}
+
+.linha {
+  border-bottom: 1px solid var(--cor-borda-linha);
+}
+
+.linhaSelecionada {
+  background: var(--cor-destaque-fundo);
+}
+
+.posicao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cor-superficie-suave);
+  font-size: var(--texto-md);
+  font-weight: var(--peso-bold);
+}
+
+.podio {
+  background: var(--cor-primaria);
+  color: var(--cor-texto-invertido);
+}
+
+.candidato {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: left;
+}
+
+.nome {
+  font-size: var(--texto-base);
+  font-weight: var(--peso-semibold);
+  overflow-wrap: anywhere;
+}
+
+.nome:hover {
+  color: var(--cor-primaria);
+}
+
+.detalhe {
+  font-size: var(--texto-sm);
+  color: var(--cor-texto-suave);
+  overflow-wrap: anywhere;
+}
+
+.notaGeral {
+  font-size: var(--texto-xl);
+  font-weight: var(--peso-bold);
+  letter-spacing: -0.02em;
+}
+
+.notas {
+  display: contents;
+}
+
+.comparacao {
+  display: grid;
+  grid-template-columns: 120px repeat(var(--colunas-comparacao), minmax(0, 1fr));
+  gap: var(--espaco-4) var(--espaco-5);
+  align-items: center;
+}
+
+.comparacaoRotulo {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-secundario);
+}
+
+.comparacaoCandidato {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.comparacaoCelula {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.comparacaoNomeCelular {
+  display: none;
+}
+
+.semAvaliacao {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-suave);
+}
+
+.semAvaliacao a {
+  color: var(--cor-primaria);
+  font-weight: var(--peso-medio);
+}
+
+@media (max-width: 1023px) {
+  .cabecalhoTabela {
+    display: none;
+  }
+
+  .grade {
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "posicao candidato geral"
+      "notas notas notas"
+      "comparar comparar comparar";
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .posicao {
+    grid-area: posicao;
+  }
+
+  .candidato {
+    grid-area: candidato;
+  }
+
+  .notaGeral {
+    grid-area: geral;
+  }
+
+  .notas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    grid-area: notas;
+  }
+
+  .comparar {
+    grid-area: comparar;
+  }
+}
+
+@media (max-width: 760px) {
+  .criterio,
+  .seletorCriterio {
+    flex: 1 1 100%;
+  }
+
+  .criterio {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .seletorCriterio {
+    min-width: 0;
+  }
+
+  .comparacao {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--espaco-3);
+  }
+
+  .cantoComparacao,
+  .cabecalhoComparacao {
+    display: none;
+  }
+
+  .comparacaoNomeCelular {
+    display: block;
+    max-width: 100%;
+    font-size: var(--texto-md);
+    font-weight: var(--peso-medio);
+    overflow-wrap: anywhere;
+  }
+
+  .comparacaoRotulo {
+    grid-column: 1 / -1;
+    padding-top: var(--espaco-2);
+    border-top: 1px solid var(--cor-borda-suave);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-semibold);
+  }
+}

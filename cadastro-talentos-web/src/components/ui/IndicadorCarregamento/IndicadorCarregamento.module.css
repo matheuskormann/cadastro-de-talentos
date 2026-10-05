@@ -1,0 +1,18 @@
+.indicador {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid var(--cor-primaria-suave-hover);
+  border-top-color: var(--cor-primaria);
+  animation: girar 0.8s linear infinite;
+}
+
+.centralizado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-3);
+  padding: var(--espaco-14) var(--espaco-6);
+  color: var(--cor-texto-secundario);
+}

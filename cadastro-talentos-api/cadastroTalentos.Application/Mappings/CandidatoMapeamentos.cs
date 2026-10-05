@@ -53,7 +53,7 @@ public static class CandidatoMapeamentos
         candidato.DataNascimentoEstimada,
         candidato.OrigemCadastro,
         candidato.Curriculo is not null,
-        candidato.Avaliacao?.NotaGeral,
+        candidato.Avaliacao?.ParaDto(),
         candidato.DataCadastro);
 
     public static CandidatoDetalheDto ParaDetalheDto(this Candidato candidato, DateOnly dataReferencia) => new(

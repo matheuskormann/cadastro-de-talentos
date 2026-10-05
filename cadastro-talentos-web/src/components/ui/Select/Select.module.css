@@ -1,0 +1,79 @@
+.seletor {
+  position: relative;
+}
+
+.gatilho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  text-align: left;
+  cursor: pointer;
+}
+
+.compacto {
+  min-height: 44px;
+  border-color: var(--cor-borda-suave);
+  font-size: var(--texto-md);
+}
+
+.valor {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vazio {
+  color: var(--cor-texto-apagado);
+}
+
+.seta {
+  flex: none;
+  color: var(--cor-texto-secundario);
+  transition: transform var(--transicao-media);
+}
+
+.setaAberta {
+  transform: rotate(180deg);
+}
+
+.lista {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: var(--camada-flutuante);
+  min-width: 100%;
+  max-height: 280px;
+  padding: 6px;
+  overflow-y: auto;
+  border: 1px solid var(--cor-borda-media);
+  border-radius: 14px;
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-flutuante);
+  animation: surgir 180ms var(--curva-suave);
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  padding: 10px 12px;
+  border-radius: var(--raio-sm);
+  font-size: var(--texto-base);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.opcaoAtiva {
+  background: var(--cor-superficie-suave);
+}
+
+.opcaoSelecionada {
+  color: var(--cor-primaria);
+  font-weight: var(--peso-semibold);
+}
+
+.marca {
+  flex: none;
+}

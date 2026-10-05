@@ -1,0 +1,197 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-7);
+  animation: surgir 400ms var(--curva-suave);
+}
+
+.filtros {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-3);
+  flex-wrap: wrap;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 280px;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--cor-borda-suave);
+  border-radius: var(--raio-md);
+  background: var(--cor-superficie);
+  color: var(--cor-texto-suave);
+  transition:
+    border-color var(--transicao-rapida),
+    box-shadow var(--transicao-rapida);
+}
+
+.busca:focus-within {
+  border-color: var(--cor-primaria);
+  box-shadow: var(--anel-foco);
+}
+
+.campoBusca {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  color: var(--cor-texto);
+  font-size: var(--texto-base);
+}
+
+.campoBusca:focus-visible {
+  box-shadow: none;
+}
+
+.limparBusca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--cor-cinza-medio);
+  color: var(--cor-texto-invertido);
+  font-size: var(--texto-xs);
+  line-height: 1;
+}
+
+.ordenacao {
+  min-width: 190px;
+}
+
+.tabela {
+  overflow: hidden;
+  border-radius: var(--raio-xl);
+  background: var(--cor-superficie);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: minmax(220px, 2.2fr) minmax(200px, 2fr) minmax(90px, 0.8fr) minmax(100px, 1fr) 88px 16px;
+  align-items: center;
+  gap: var(--espaco-4);
+  padding: 16px 24px;
+}
+
+.cabecalhoTabela {
+  border-bottom: 1px solid var(--cor-borda-suave);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-semibold);
+  color: var(--cor-texto-suave);
+  letter-spacing: 0.02em;
+}
+
+.linha {
+  width: 100%;
+  border-bottom: 1px solid var(--cor-borda-linha);
+  background: var(--cor-superficie);
+  text-align: left;
+  transition: background 120ms ease;
+}
+
+.linha:hover {
+  background: var(--cor-linha-hover);
+}
+
+.linhaSelecionada {
+  background: var(--cor-destaque-fundo);
+}
+
+.celulaPrincipal,
+.celulaContato {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.nome {
+  font-size: var(--texto-base);
+  font-weight: var(--peso-semibold);
+  overflow-wrap: anywhere;
+}
+
+.detalhe {
+  font-size: var(--texto-sm);
+  color: var(--cor-texto-suave);
+  overflow-wrap: anywhere;
+}
+
+.celulaContato {
+  font-size: var(--texto-md);
+}
+
+.texto {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-secundario);
+}
+
+.semNota {
+  font-size: var(--texto-sm);
+  color: var(--cor-texto-apagado);
+}
+
+.seta {
+  color: var(--cor-texto-apagado);
+}
+
+@media (max-width: 1023px) {
+  .cabecalhoTabela {
+    display: none;
+  }
+
+  .grade {
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas:
+      "principal principal principal seta"
+      "contato contato contato seta"
+      "nota origem data data";
+    gap: 8px 10px;
+    padding: 16px;
+  }
+
+  .celulaPrincipal {
+    grid-area: principal;
+  }
+
+  .celulaContato {
+    grid-area: contato;
+  }
+
+  .celulaNota {
+    grid-area: nota;
+  }
+
+  .celulaOrigem {
+    grid-area: origem;
+  }
+
+  .celulaData {
+    grid-area: data;
+    justify-self: end;
+    font-size: var(--texto-sm);
+  }
+
+  .seta {
+    grid-area: seta;
+    align-self: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .filtros > * {
+    flex: 1 1 100%;
+  }
+
+  .ordenacao {
+    min-width: 0;
+  }
+
+  .campoBusca {
+    font-size: var(--texto-md);
+  }
+}

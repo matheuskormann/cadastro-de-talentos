@@ -1,0 +1,66 @@
+.barra {
+  display: grid;
+  grid-template-columns: minmax(84px, auto) 1fr 32px;
+  align-items: center;
+  gap: var(--espaco-3);
+  width: 100%;
+  font-size: var(--texto-md);
+}
+
+.compacta {
+  gap: var(--espaco-2);
+  font-size: var(--texto-sm);
+}
+
+.semRotulo,
+.rotuloSomenteCelular {
+  grid-template-columns: 1fr 24px;
+}
+
+.semRotulo .rotulo,
+.rotuloSomenteCelular .rotulo {
+  display: none;
+}
+
+.rotulo {
+  color: var(--cor-texto-secundario);
+}
+
+.trilho {
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  border-radius: var(--raio-total);
+  background: var(--cor-trilho);
+}
+
+.compacta .trilho {
+  height: 6px;
+}
+
+.preenchimento {
+  display: block;
+  height: 100%;
+  border-radius: var(--raio-total);
+  background: var(--cor-primaria);
+  transition: width var(--transicao-lenta);
+}
+
+.destaque .preenchimento {
+  background: var(--cor-destaque);
+}
+
+.valor {
+  font-weight: var(--peso-semibold);
+  text-align: right;
+}
+
+@media (max-width: 1023px) {
+  .rotuloSomenteCelular {
+    grid-template-columns: minmax(96px, auto) 1fr 24px;
+  }
+
+  .rotuloSomenteCelular .rotulo {
+    display: block;
+  }
+}

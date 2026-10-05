@@ -1,0 +1,68 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.rotulo {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-medio);
+  color: var(--cor-texto-secundario);
+}
+
+.erro {
+  font-size: var(--texto-xs);
+  color: var(--cor-erro);
+}
+
+.controle {
+  width: 100%;
+  min-height: var(--altura-campo);
+  padding: 0 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-size: var(--texto-lg);
+  outline: none;
+  transition:
+    border-color var(--transicao-rapida),
+    box-shadow var(--transicao-rapida),
+    background var(--transicao-rapida);
+}
+
+.controle::placeholder {
+  color: var(--cor-texto-apagado);
+}
+
+.controle:focus,
+.controle:focus-visible {
+  border-color: var(--cor-primaria);
+  box-shadow: var(--anel-foco);
+}
+
+.controle:disabled {
+  background: var(--cor-superficie-suave);
+  color: var(--cor-texto-suave);
+  cursor: not-allowed;
+}
+
+.destacado {
+  border-color: var(--cor-destaque);
+  background: var(--cor-destaque-fundo);
+}
+
+.invalido {
+  border-color: var(--cor-erro);
+  background: var(--cor-erro-fundo);
+}
+
+.areaTexto {
+  padding: 12px 14px;
+  line-height: 1.4;
+  resize: vertical;
+}

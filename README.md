@@ -71,8 +71,11 @@ npm run dev
 
 Aplicação em `http://localhost:3000`.
 
+
+Mais detalhes em [DESENVOLVIMENTO.md](DESENVOLVIMENTO.md).
+
 ## Autor
 
-**matheuskormann**
+**Matheus Kormann**
 E-mail: [matheuskormann.s@gmail.com](mailto:matheuskormann.s@gmail.com)
 

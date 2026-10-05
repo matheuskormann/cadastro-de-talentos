@@ -1,0 +1,55 @@
+.sobreposicao {
+  position: fixed;
+  inset: 0;
+  z-index: var(--camada-sobreposicao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espaco-5);
+  background: var(--cor-sobreposicao);
+  animation: aparecer 200ms ease;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-6);
+  width: min(420px, 100%);
+  padding: var(--espaco-7);
+  border-radius: var(--raio-2xl);
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-aviso);
+  animation: surgir 300ms var(--curva-suave);
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.titulo {
+  font-size: var(--texto-xl);
+  font-weight: var(--peso-semibold);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.descricao {
+  font-size: var(--texto-base);
+  color: var(--cor-texto-secundario);
+  text-wrap: pretty;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--espaco-2);
+  flex-wrap: wrap;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,101 @@
+:root {
+  --cor-fundo: #f2f2f2;
+  --cor-superficie: #ffffff;
+  --cor-superficie-suave: #f2f2f2;
+  --cor-superficie-suave-hover: #e6e6e6;
+  --cor-superficie-translucida: rgb(255 255 255 / 0.78);
+  --cor-trilho: #e4e4e4;
+
+  --cor-texto: #0d0d0d;
+  --cor-texto-secundario: #404040;
+  --cor-texto-suave: #5e5e5e;
+  --cor-texto-apagado: #b0b0b0;
+  --cor-texto-invertido: #ffffff;
+
+  --cor-primaria: #107492;
+  --cor-primaria-hover: #0c5f78;
+  --cor-primaria-suave: #e8f5fa;
+  --cor-primaria-suave-hover: #d6eff7;
+  --cor-primaria-translucida: rgb(16 116 146 / 0.08);
+  --cor-destaque: #84cde6;
+  --cor-destaque-fundo: #f3fafd;
+  --cor-arrasto-fundo: #ddf1f8;
+  --cor-linha-documento: #e3e3e3;
+
+  --cor-erro: #b42318;
+  --cor-erro-clara: #f97066;
+  --cor-erro-fundo: #fef3f2;
+  --cor-erro-translucida: rgb(180 35 24 / 0.07);
+  --cor-alerta: #93570a;
+  --cor-alerta-fundo: #fef6e7;
+
+  --cor-borda: rgb(0 0 0 / 0.12);
+  --cor-borda-media: rgb(0 0 0 / 0.08);
+  --cor-borda-suave: rgb(0 0 0 / 0.06);
+  --cor-borda-linha: rgb(0 0 0 / 0.05);
+  --cor-linha-hover: #f7fbfd;
+  --cor-cinza-medio: #c7c7c7;
+  --cor-sobreposicao: rgb(13 13 13 / 0.3);
+
+  --fonte-base: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.8125rem;
+  --texto-md: 0.875rem;
+  --texto-base: 0.9375rem;
+  --texto-lg: 1rem;
+  --texto-xl: 1.1875rem;
+  --texto-titulo-secao: 1.5rem;
+  --texto-titulo-painel: 1.625rem;
+  --texto-titulo-pagina: 2.75rem;
+  --texto-titulo-destaque: 3.25rem;
+
+  --peso-regular: 400;
+  --peso-medio: 500;
+  --peso-semibold: 600;
+  --peso-bold: 700;
+
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 0.75rem;
+  --espaco-4: 1rem;
+  --espaco-5: 1.25rem;
+  --espaco-6: 1.5rem;
+  --espaco-7: 1.75rem;
+  --espaco-8: 2rem;
+  --espaco-10: 2.5rem;
+  --espaco-14: 3.5rem;
+  --espaco-24: 6rem;
+
+  --raio-xs: 4px;
+  --raio-sm: 8px;
+  --raio-md: 12px;
+  --raio-lg: 16px;
+  --raio-xl: 22px;
+  --raio-2xl: 24px;
+  --raio-total: 999px;
+
+  --sombra-segmento: 0 1px 3px rgb(0 0 0 / 0.12), 0 1px 1px rgb(0 0 0 / 0.04);
+  --sombra-flutuante: 0 12px 32px rgb(13 13 13 / 0.14), 0 1px 2px rgb(0 0 0 / 0.06);
+  --sombra-painel: -20px 0 60px rgb(13 13 13 / 0.12);
+  --sombra-aviso: 0 12px 40px rgb(13 13 13 / 0.25);
+  --sombra-arrasto: 0 24px 60px rgb(16 116 146 / 0.18);
+  --anel-foco: 0 0 0 4px rgb(132 205 230 / 0.45);
+
+  --curva-suave: cubic-bezier(0.32, 0.72, 0, 1);
+  --transicao-rapida: 150ms ease;
+  --transicao-media: 250ms var(--curva-suave);
+  --transicao-lenta: 450ms var(--curva-suave);
+
+  --altura-campo: 46px;
+  --altura-cabecalho: 60px;
+  --largura-conteudo: 1120px;
+  --largura-formulario: 880px;
+  --largura-painel: 520px;
+
+  --camada-cabecalho: 20;
+  --camada-flutuante: 25;
+  --camada-sobreposicao: 30;
+  --camada-aviso: 40;
+}

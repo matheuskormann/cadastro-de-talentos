@@ -1,0 +1,11 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--espaco-10);
+  animation: surgir 400ms var(--curva-suave);
+}
+
+.pagina > a {
+  align-self: flex-start;
+}

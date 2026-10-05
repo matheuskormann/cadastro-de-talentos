@@ -1,0 +1,71 @@
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: var(--camada-cabecalho);
+  border-bottom: 1px solid var(--cor-borda-media);
+  background: var(--cor-superficie-translucida);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-4);
+  max-width: var(--largura-conteudo);
+  height: var(--altura-cabecalho);
+  margin: 0 auto;
+  padding: 0 var(--espaco-7);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.simbolo {
+  flex: none;
+  width: 30px;
+  height: 30px;
+}
+
+.nome {
+  font-size: 1.0625rem;
+  font-weight: var(--peso-semibold);
+  letter-spacing: -0.01em;
+}
+
+.lateral {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .conteudo {
+    padding: 0 var(--espaco-4);
+  }
+
+  .nome,
+  .lateral {
+    display: none;
+  }
+
+  .marca {
+    flex: none;
+  }
+
+  .navegacao {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .conteudo {
+    gap: var(--espaco-3);
+    padding: 0 var(--espaco-3);
+  }
+}

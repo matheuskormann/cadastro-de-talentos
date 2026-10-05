@@ -1,0 +1,111 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-5);
+  max-width: var(--largura-formulario);
+  margin: 0 auto;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 18px var(--espaco-4);
+}
+
+.larguraTotal {
+  grid-column: 1 / -1;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  padding: 18px;
+  border: 1px solid var(--cor-borda-media);
+  border-radius: var(--raio-lg);
+}
+
+.itemCabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+}
+
+.itemTitulo {
+  font-size: var(--texto-md);
+  font-weight: var(--peso-semibold);
+  color: var(--cor-texto-secundario);
+}
+
+.linhaCompetencia {
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) minmax(150px, 1fr) minmax(150px, 1fr) auto;
+  align-items: end;
+  gap: var(--espaco-3);
+}
+
+.semItens {
+  font-size: var(--texto-md);
+  color: var(--cor-texto-suave);
+}
+
+.notaGeral {
+  display: flex;
+  align-items: baseline;
+  gap: var(--espaco-2);
+  font-size: var(--texto-md);
+  color: var(--cor-texto-secundario);
+}
+
+.notaGeralValor {
+  font-size: var(--texto-titulo-secao);
+  font-weight: var(--peso-bold);
+  color: var(--cor-texto);
+  letter-spacing: -0.02em;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .linhaCompetencia {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-bottom: var(--espaco-4);
+    border-bottom: 1px solid var(--cor-borda-suave);
+  }
+
+  .linhaCompetencia > :first-child,
+  .linhaCompetencia > :last-child {
+    grid-column: 1 / -1;
+  }
+
+  .linhaCompetencia > :last-child {
+    justify-self: start;
+  }
+
+  .item {
+    padding: 14px;
+  }
+
+  .acoes > * {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .linhaCompetencia {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,43 @@
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-1);
+  border-radius: var(--raio-total);
+  font-weight: var(--peso-semibold);
+  white-space: nowrap;
+}
+
+.medio {
+  padding: 3px 10px;
+  font-size: var(--texto-xs);
+}
+
+.pequeno {
+  padding: 2px 8px;
+  font-size: 0.6875rem;
+}
+
+.destaque {
+  background: var(--cor-destaque);
+  color: var(--cor-texto);
+}
+
+.primaria {
+  background: var(--cor-primaria-suave);
+  color: var(--cor-primaria);
+}
+
+.neutra {
+  background: var(--cor-superficie-suave);
+  color: var(--cor-texto-secundario);
+}
+
+.escura {
+  background: var(--cor-texto);
+  color: var(--cor-texto-invertido);
+}
+
+.alerta {
+  background: var(--cor-alerta-fundo);
+  color: var(--cor-alerta);
+}

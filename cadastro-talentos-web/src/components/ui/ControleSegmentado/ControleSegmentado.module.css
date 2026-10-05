@@ -1,0 +1,47 @@
+.trilho {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 10px;
+  background: var(--cor-trilho);
+}
+
+.claro {
+  background: var(--cor-superficie-suave);
+}
+
+.segmento {
+  padding: 8px 14px;
+  border-radius: var(--raio-sm);
+  color: var(--cor-texto);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-medio);
+  white-space: nowrap;
+  transition:
+    background var(--transicao-media),
+    box-shadow var(--transicao-media);
+}
+
+.segmentoLargo {
+  padding: 6px 18px;
+}
+
+.selecionado {
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-segmento);
+}
+
+@media (max-width: 760px) {
+  .segmento {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .segmento,
+  .segmentoLargo {
+    padding: 7px 9px;
+    font-size: var(--texto-xs);
+  }
+}
